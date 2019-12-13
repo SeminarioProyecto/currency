@@ -1,0 +1,64 @@
+<page-header></page-header>
+
+<mat-card>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <formly-form [form]="form" [fields]="fields" [model]="model">
+        <ng-select formControlName="monedaOrigen" placeholder="seleccione la moneda a convertir" >
+          <ng-option value="{{currency.codigoMoneda}}" *ngFor="let currency of currencys"  >
+            {{currency.nombreMoneda}}</ng-option>
+          <ng-option [value]="'custom'">Elija una opción</ng-option>
+        </ng-select>
+        <ng-select formControlName="monedaDestino" placeholder="seleccione cambio" >
+          <ng-option value="{{currency.codigoMoneda}}" *ngFor="let currency of currencys"  >
+            {{currency.nombreMoneda}}</ng-option>
+          <ng-option [value]="'custom'">Elija una opción</ng-option>
+        </ng-select>
+    </formly-form>
+    <button mat-raised-button color="primary">Convertir</button>
+  </form>
+  <h1 *ngFor='let cambio of cambios'>{{cambio.symbol}}  {{cambio.resultado}}  </h1>
+  <br>
+
+  <div>
+      <table > 
+          <thead >
+            <!-- <tr>
+              
+            </tr> -->
+            <tr >
+              <th scope="col"> valores </th> 
+              <th scope="col" *ngFor='let currency of currencys'><img src="assets/images/bandera/{{currency.image}}" width="20px" class="img-fluid" alt="{{currency.imagen}}">  {{currency.codigoMoneda}} </th>
+              <!-- <th scope="col"> Símbolo </th>
+              <th scope="col"> Valor </th> --> 
+            </tr>
+          </thead>
+          <tbody  >
+             <tr *ngFor='let tabl of tabls'>
+              <!-- <td *ngFor='let tabl of tabls'> {{tabl.HNL}} </td> -->
+              <!-- <!-<td > {{currency.nombrePais}} </td>
+              <td > {{currency.codigoMoneda}} </td>
+              <td > {{currency.rate}} </td>  -->
+              <td > <img src="assets/images/bandera/{{tabl.undefined}}" width="30px" class="img-fluid" alt=""></td>
+
+              <td > {{tabl.HNL}} </td>
+              <td > {{tabl.EUR}} </td>
+              <td > {{tabl.JPY}} </td>
+              <td > {{tabl.CRC}} </td>
+              <td > {{tabl.NIO}} </td>
+              <td > {{tabl.PAB}} </td>
+              <td > {{tabl.USD}} </td>
+              <td > {{tabl.SVC}} </td>
+              <td > {{tabl.MXN}} </td>
+              <td > {{tabl.GTQ}} </td>
+            </tr>
+          </tbody>
+          <!-- <ng-container >
+          </ng-container>
+          <ng-container >
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
+  
+        </table>
+  </div>
+</mat-card>

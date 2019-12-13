@@ -1,0 +1,242 @@
+<breadcrumb></breadcrumb>
+
+<div class="matero-row" fxLayout="row wrap">
+
+  <!-- Statistics -->
+  <div class="matero-col" fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
+    <mat-card class="bg-indigo-500 text-white">
+      <mat-card-title class="f-s-12 f-w-100">Monedas seleccionas</mat-card-title>
+      <mat-card-content>
+        <h2>10 Divisas</h2>
+        <easy-progress [value]="18"></easy-progress>
+        <small class="text-muted">Mensual</small>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="matero-col" fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
+    <mat-card class="bg-blue-500 text-white">
+      <mat-card-title class="f-s-12 f-w-100">Total de monedas</mat-card-title>
+      <mat-card-content>
+        <h2>182 tipos de cambio</h2>
+        <easy-progress [value]="70"></easy-progress>
+        <small class="text-muted">Mensual</small>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="matero-col" fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100" *ngIf='data'>
+    <mat-card class="bg-green-500 text-white">
+      <mat-card-title class="f-s-12 f-w-100">{{data.nombreMoneda}}</mat-card-title>
+      <mat-card-content >
+        <h2>{{data.rate}}</h2>
+       <!--  <h2>{{currency.name.first}}</h2> -->
+        <easy-progress [value]="80"></easy-progress>
+        <small class="text-muted">Hoy</small>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="matero-col" fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
+    <mat-card class="bg-teal-500 text-white">
+      <mat-card-title class="f-s-12 f-w-100">Mundo</mat-card-title>
+      <mat-card-content>
+        <h2>1.2 anglocuatrillones</h2>
+        <easy-progress [value]="40"></easy-progress>
+        <small class="text-muted">Mensual</small>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Charts -->
+  <div class="matero-col" fxFlex="100" fxFlex.gt-sm="60">
+    <mat-card>
+      <mat-card-subtitle>Estadisticas de divisas</mat-card-subtitle>
+      <div id="chart1" ></div>
+    </mat-card>
+  </div>
+  <!--<div class="matero-col" fxFlex="100" fxFlex.gt-sm="40" id="globalLoader">
+    <mat-card>
+      <mat-card-subtitle>Cambio diario</mat-card-subtitle>
+       <table > 
+        <thead >
+          <!-<tr>
+            
+          </tr> --
+          <tr >
+            <!- <th scope="col"> valores </th>  -->
+            <!-- <th scope="col" *ngFor='let currency of currencys'><img src="assets/images/bandera/{{currency.image}}" width="20px" class="img-fluid" alt="{{currency.imagen}}">  {{currency.codigoMoneda}} </th> -->
+            <!-- <th scope="col"> Símbolo </th>
+            <th scope="col"> Valor </th> --
+          </tr>
+        </thead>
+        <tbody *ngFor='let tabl of tabls' >
+           <tr *ngIf='tabl'>
+            <!- <td *ngFor='let currency of currencys' > <img src="assets/images/bandera/{{currency.image}}" width="30px" class="img-fluid" alt="{{currency.imagen}}">  {{currency.codigoMoneda}}</td> -->
+            <!-- <td *ngFor='let tabl of tabls'> {{tabl.HNL}} </td> -->
+            <!-- <!-<td > {{currency.nombrePais}} </td>
+            <td > {{currency.codigoMoneda}} </td>
+            <td > {{currency.rate}} </td>  --
+            <td > {{tabl.HNL}} </td>
+            <td > {{tabl.EUR}} </td>
+            <td > {{tabl.JPY}} </td>
+            <td > {{tabl.CRC}} </td>
+            <td > {{tabl.NIO}} </td>
+            <td > {{tabl.PAB}} </td>
+            <td > {{tabl.USD}} </td>
+            <td > {{tabl.SVC}} </td>
+            <td > {{tabl.MXN}} </td>
+            <td > {{tabl.GTQ}} </td>
+          </tr>
+        </tbody>
+        <!- <ng-container >
+        </ng-container>
+        <ng-container >
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> --
+
+      </table> 
+      
+    </mat-card>
+  </div>-->
+
+  <!-- Others -->
+  <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+    <mat-card>
+      <mat-tab-group class="m--16">
+        <mat-tab label="Primero">
+          <div class="m-16">
+            <img class="d-block w-full" src="assets/images/divisa/lempiramoneda.jpg" alt="">
+            <h3>Lempira hondureño
+            </h3>
+            <p>
+              El Lempira (código ISO 4217: HNL) es la unidad monetaria de Honduras desde 1931. Se divide en 100 centavos.
+              El organismo responsable de la emisión del Lempira es el Banco Central de Honduras.
+              Circulan monedas de 5 y 10 centavos (aleación de cobre y cinc) y 20 y 50 centavos (aleación de acero y níquel).
+              Circulaban monedas de 1 y 2 centavos (fabricadas con una aleación de acero y cobre). 
+              El Banco Atlántida fundado en 1913 como entidad bancaría privada, fue el primer emisor de papel moneda en el país.
+              Antes de 1930, la moneda oficial era el peso. En 1932 el Congreso Nacional estableció como nueva moneda oficial el Lempira.
+              Más tarde, fue fundado el Banco Central de Honduras en el año de 1950 y desde entonces la divisa pasó a estar bajo la tutela y el control estatal. </p>
+          </div>
+        </mat-tab>
+        <mat-tab label="Segundo">
+          <div class="m-16">
+            <img class="d-block w-full" src="assets/images/divisa/euromoneda.jpg" alt="">
+            <h3>Euro.</h3>
+            <p>
+              El euro comenzó su andadura en 1999, cuando 11 países (Austria, Bélgica, Finlandia, Francia, Alemania, Irlanda, Italia, Luxemburgo,
+              Países Bajos, Portugal y España) fijaron sus tipos de cambio y crearon una nueva moneda con una política monetaria que pasó al Banco Central Europeo.
+              Al principio, el euro era una "moneda invisible" y solo se utilizaba para fines contables. Tres años después, las monedas y los 
+              billetes en euros llegaron a la circulación y las monedas nacionales se retiraron gradualmente.
+              A lo largo de los años, 8 países más se unieron al club (Chipre, Estonia, Grecia, Letonia, Lituania, Malta, Eslovaquia, Eslovenia).
+              Los primeros 10 años del euro estuvieron marcados por el establecimiento y la ampliación de la moneda.
+              La segunda década fue en gran medida eclipsada por la crisis.
+              Cinco países de la eurozona (Irlanda, España, Portugal, Chipre y Grecia) tuvieron que buscar ayuda debido a la crisis financiera y la subsiguiente crisis de la deuda soberana en medio del aumento de las especulaciones sobre la salida del euro.</p>
+
+          </div>
+        </mat-tab>
+        <mat-tab label="Tercero">
+          <div class="m-16">
+            <img class="d-block w-full" src="assets/images/divisa/dolarmoneda.jpg" alt="">
+            <h3>Dolar estadounidense</h3>
+            <p>
+              La historia del dólar estadounidense se remonta a 1690 antes del nacimiento del país, cuando la región no era más que un conjunto de colonias europeas. 
+              El primer atisbo de dólar que se conoce pertenece a una colonia de Massachusetts que comenzó a usar billetes de papel para financiar expediciones militares. 
+              Así, tras la introducción del papel moneda en Massachusetts, el resto de colonias adoptó esta técnica de intercambio.
+              De todos modos, los británicos impusieron diversas restricciones a las monedas de papel y cuando comenzaron a popularizarse decidieron ilegalizarlas.
+              En 1775, cuando los colonos se preparaban para ir a la guerra contra los británicos, se introdujo la moneda continental con el objetivo de unificar las transacciones. 
+              Sin embargo, esta moneda no duró mucho ya que no había suficiente respaldo financiero y los billetes podían ser falsificados fácilmente.</p>
+
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+   <!--  <mat-card>
+      <mat-card-subtitle>Album</mat-card-subtitle>
+      <mat-card-content>
+        <mat-grid-list cols="2">
+          <mat-grid-tile class="bg-red-50">1</mat-grid-tile>
+          <mat-grid-tile class="bg-purple-50">2</mat-grid-tile>
+          <mat-grid-tile class="bg-orange-50">3</mat-grid-tile>
+          <mat-grid-tile class="bg-cyan-50">4</mat-grid-tile>
+        </mat-grid-list>
+      </mat-card-content>
+    </mat-card>-->
+  </div> 
+
+  <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+    <mat-card>
+      <mat-card-subtitle>Paises</mat-card-subtitle>
+      <mat-list>
+        <mat-list-item *ngFor="let message of messages">
+          <img matListAvatar [src]="message.img" alt="">
+          <h3 matLine> {{message.subject}} </h3>
+          <p matLine>
+            <span>{{message.content}} </span>
+          </p>
+        </mat-list-item>
+      </mat-list>
+    </mat-card>
+    
+    <!-- Aquí se muestra la tabla de valores traidos de la API -->
+    <mat-card >
+      <mat-card-subtitle>Tabla de valores</mat-card-subtitle>
+      <mat-card-content >
+        <table class="table"> 
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col"> Imagen </th>
+              <th scope="col"> Nombre </th>
+              <th scope="col"> Símbolo </th>
+              <th scope="col"> Valor </th>
+            </tr>
+          </thead>
+          <tbody *ngFor='let currency of currencys' >
+            <tr>
+              <td > <img src="assets/images/bandera/{{currency.image}}" width="30px" class="img-fluid" alt="{{currency.imagen}}"></td>
+              <td > {{currency.nombrePais}} </td>
+              <td > {{currency.codigoMoneda}} </td>
+              <td > {{currency.rate}} </td>
+            </tr>
+          </tbody>
+          <!-- <ng-container >
+          </ng-container>
+          <ng-container >
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
+  
+</table>
+      </mat-card-content>
+    </mat-card>
+    <!-- <mat-card>
+      <mat-card-subtitle>Chips & Buttons</mat-card-subtitle>
+      <mat-card-content>
+        <mat-chip-list>
+          <mat-chip>One fish</mat-chip>
+          <mat-chip color="primary" selected>Primary fish</mat-chip>
+          <mat-chip color="accent" selected>Accent fish</mat-chip>
+          <mat-chip color="warn" selected>Two fish</mat-chip>
+          <mat-chip class="bg-orange-500" selected>Orange fish</mat-chip>
+          <mat-chip class="bg-teal-500" selected>Teal fish</mat-chip>
+          <mat-chip class="bg-cyan-500" selected>Cyan fish</mat-chip>
+          <mat-chip class="bg-purple-500" selected>Purple fish</mat-chip>
+          <mat-chip class="bg-green-500" selected>Green fish</mat-chip>
+        </mat-chip-list>
+
+        <div>
+          <button mat-raised-button>Basic</button>
+          <button mat-raised-button color="primary">Primary</button>
+          <button mat-raised-button color="accent">Accent</button>
+          <button mat-raised-button color="warn">Warn</button>
+          <button mat-raised-button disabled>Disabled</button>
+          <a mat-raised-button routerLink=".">Link</a>
+          <button mat-raised-button class="bg-orange-500 text-white">Orange</button>
+          <button mat-raised-button class="bg-teal-500 text-white">Teal</button>
+          <button mat-raised-button class="bg-cyan-500 text-white">Cyan</button>
+          <button mat-raised-button class="bg-purple-500 text-white">Purple</button>
+          <button mat-raised-button class="bg-green-500 text-white">Green</button>
+        </div>
+      </mat-card-content>
+    </mat-card> -->
+
+  </div>
+</div>

@@ -1,0 +1,99 @@
+<mat-card>
+  <mat-card-title>Editar perfil</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="reactiveForm" class="matero-form-horizontal">
+      <div fxLayout="row wrap" fxLayoutGap="8px grid">
+
+        <div fxFlex="50" fxFlex.lt-md="100">
+          <mat-form-field>
+            <mat-label>Nombre de usuario</mat-label>
+            <input matInput placeholder="Simple placeholder" formControlName="username" required>
+            <mat-error *ngIf="reactiveForm.get('username').invalid">Por favor ingrese el nombre de usuario
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div fxFlex="50" fxFlex.lt-md="100">
+          <mat-form-field>
+            <mat-label>Correo Electronico</mat-label>
+            <input matInput placeholder="Simple placeholder" formControlName="email">
+          </mat-form-field>
+        </div>
+
+        <div fxFlex="50" fxFlex.lt-md="100">
+          <mat-form-field>
+            <mat-label>Cambiar contraseña</mat-label>
+            <input matInput placeholder="Simple placeholder" formControlName="password" type="password">
+          </mat-form-field>
+        </div>
+
+        <div fxFlex="50" fxFlex.lt-md="100">
+          <mat-form-field>
+            <mat-label>Confirmar contraseña</mat-label>
+            <input matInput placeholder="Simple placeholder" formControlName="password" type="password">
+          </mat-form-field>
+        </div>
+<!-- 
+        <div fxFlex="50" fxFlex.lt-md="100">
+          <mat-form-field>
+            <mat-label>Address</mat-label>
+            <input matInput placeholder="Simple placeholder" formControlName="address" required>
+            <mat-error *ngIf="reactiveForm.get('address').invalid">Please enter address</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div fxFlex="50" fxFlex.lt-md="100">
+          <mat-form-field>
+            <mat-label>Company</mat-label>
+            <input matInput placeholder="Simple placeholder" formControlName="company" required>
+            <mat-error *ngIf="reactiveForm.get('company').invalid">Please enter company</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div fxFlex="50" fxFlex.lt-md="100">
+          <mat-form-field>
+            <mat-label>Mobile</mat-label>
+            <input matInput placeholder="Simple placeholder" type="number" formControlName="mobile"
+                   required>
+            <mat-icon matSuffix>smartphone</mat-icon>
+            <mat-error *ngIf="reactiveForm.get('mobile').invalid">Please enter mobile</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div fxFlex="50" fxFlex.lt-md="100">
+          <mat-form-field>
+            <mat-label>Tele</mat-label>
+            <input matInput placeholder="Simple placeholder" type="number" formControlName="tele"
+                   required>
+            <mat-icon matSuffix>phone</mat-icon>
+            <mat-error *ngIf="reactiveForm.get('tele').invalid">Please enter tele</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div fxFlex="50" fxFlex.lt-md="100">
+          <mat-form-field>
+            <mat-label>Website</mat-label>
+            <input matInput placeholder="Simple placeholder" formControlName="website" required>
+            <mat-error *ngIf="reactiveForm.get('website').invalid">Please enter website</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div fxFlex="50" fxFlex.lt-md="100">
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker2" placeholder="Choose a date"
+                   formControlName="date">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+            <mat-error *ngIf="reactiveForm.get('date').invalid">Please enter website</mat-error>
+          </mat-form-field>
+        </div> -->
+
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="end center">
+        <button mat-raised-button color="primary" class="m-t-8">Guardar</button>
+      </div>
+
+    </form>
+  </mat-card-content>
+</mat-card>

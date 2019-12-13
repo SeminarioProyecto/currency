@@ -1,0 +1,31 @@
+<div class="w-full h-full" fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-card class="mat-elevation-z4 m-b-0" style="max-width: 380px;">
+    <mat-card-title class="text-center m-b-24">Bienvenido</mat-card-title>
+    <mat-card-content>
+      <form class="matero-form-horizontal" [formGroup]="reactiveForm">
+        <mat-form-field appearance="outline">
+          <mat-label>Correo electrónico</mat-label>
+          <input matInput placeholder="zoro@gmail.com"  formControlName="email" required>
+          <mat-error *ngIf="reactiveForm.get('email').invalid">Por favor su correo electrónico</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <input matInput placeholder="*****" type="password"
+                 formControlName="password" required>
+          <mat-error *ngIf="reactiveForm.get('password').invalid">Por favor ingrese la contraseña</mat-error>
+        </mat-form-field>
+
+        <div class="m-y-16" fxLayout="row" fxLayoutAlign="space-between center">
+          <mat-checkbox>Recuerdame</mat-checkbox>
+          <a href="">¿Olvidó su contraseña?</a>
+        </div>
+
+        <button class="w-full" mat-raised-button color="primary" (click)="login()"
+                [disabled]="reactiveForm.invalid">Guardar</button>
+
+        <div class="text-center">No tienes una cuenta de usuario? <br><a routerLink="/auth/register">Click aquí para crear una</a></div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

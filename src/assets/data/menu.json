@@ -1,0 +1,38 @@
+{
+  "menu": [
+    {
+      "state": "dashboard",
+      "name": "Tableros",
+      "type": "link",
+      "icon": "dashboard",
+      "badge": {
+        "color": "red-500"
+      }
+    },
+    {
+      "state": "profile",
+      "name": "Perfil",
+      "type": "sub",
+      "icon": "person",
+      "children": [
+          {
+          "state": "settings",
+          "name": "Configuración",
+          "type": "link"
+        }
+      ]
+    },{
+      "state": "forms",
+      "name": "Cambio",
+      "type": "sub",
+      "icon": "money",
+      "children": [
+        {
+          "state": "dynamic",
+          "name": "Cambiar moneda",
+          "type": "link"
+        }]
+      }
+    
+  ]
+}

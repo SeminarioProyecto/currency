@@ -41,9 +41,8 @@
       </span>
     </a>
     <!-- level 1 -->
-    <a navAccordionToggle class="matero-sidemenu-toggle" href=""
-       *ngIf="menuItem.type === 'sub'"
-       matRipple [matRippleDisabled]="!ripple">
+    <a navAccordionToggle class="matero-sidemenu-toggle" 
+       *ngIf="menuItem.type === 'sub'">
       <mat-icon class="menu-icon">{{ menuItem.icon }}</mat-icon>
       <span class="menu-name">{{ menuItem.name }}</span>
       <span class="menu-label bg-{{ menuItem.label.color }}" *ngIf="menuItem.label">
@@ -75,7 +74,7 @@
           <span class="menu-name">{{ childLvl1.name }}</span>
         </a>
         <!-- level 2 -->
-        <a navAccordionToggle class="matero-sidemenu-toggle" href=""
+        <a navAccordionToggle class="matero-sidemenu-toggle"
            *ngIf="childLvl1.type === 'sub'"
            matRipple [matRippleDisabled]="!ripple">
           <span class="menu-name">{{ childLvl1.name }}</span>

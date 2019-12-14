@@ -38,7 +38,7 @@ export class RegisterComponent implements OnInit {
   //   }
   //   return {};
   // };
-  register(control: FormControl) {
+  register() {
     this.registration.postUser(this.reactiveForm.value).subscribe(
       user => {
         this.userData = ['mensaje'];

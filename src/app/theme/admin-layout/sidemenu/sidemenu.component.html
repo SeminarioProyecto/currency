@@ -41,7 +41,7 @@
       </span>
     </a>
     <!-- level 1 -->
-    <!-- <a navAccordionToggle class="matero-sidemenu-toggle" 
+    <a navAccordionToggle class="matero-sidemenu-toggle" 
        *ngIf="menuItem.type === 'sub'">
       <mat-icon class="menu-icon">{{ menuItem.icon }}</mat-icon>
       <span class="menu-name">{{ menuItem.name }}</span>
@@ -53,7 +53,7 @@
         {{ menuItem.badge.value }}
       </span>
       <mat-icon class="menu-caret">arrow_drop_down</mat-icon>
-    </a> -->
+    </a> 
     <ul navAccordion class="matero-sidemenu submenu level-1" *ngIf="menuItem.type === 'sub'">
       <li navAccordionLink class="matero-sidemenu-item" routerLinkActive="active"
           *ngFor="let childLvl1 of menuItem.children"
